@@ -1511,6 +1511,113 @@ kbd {
 ═══════════════════════════════════════════════ */
 .final-test .slide-inner.wide{max-width:1180px}.exam-topline{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}.exam-badges{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end}.exam-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-card);padding:1.25rem 1.35rem}.exam-rules{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1rem}.exam-rule{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.85rem}.exam-rule strong{display:block;color:var(--text-primary);font-size:.78rem;margin-bottom:.25rem}.exam-rule span{display:block;color:var(--text-secondary);font-size:.74rem;line-height:1.45}.exam-question-title{font-family:var(--font-display);font-size:clamp(1.55rem,2.5vw,2.25rem);font-weight:700;line-height:1.1;color:var(--text-primary)}.exam-subtitle{color:var(--text-secondary);font-size:.88rem;line-height:1.55;max-width:860px;margin-top:.45rem}.exam-parts{display:flex;flex-direction:column;gap:.72rem;margin-top:1rem}.exam-part{display:grid;grid-template-columns:38px 1fr;gap:.75rem;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.85rem .95rem}.exam-part-label{width:32px;height:32px;border-radius:50%;background:var(--accent-dim);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:800;font-size:.72rem}.exam-part-text{font-size:.88rem;line-height:1.62;color:var(--text-secondary)}.exam-part-text strong{color:var(--text-primary)}.exam-note{margin-top:1rem;padding:.85rem 1rem;border-radius:var(--radius-sm);background:var(--accent-dim);border:1px solid var(--border-accent);color:var(--text-secondary);font-size:.82rem;line-height:1.5}.exam-footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.1rem}.exam-marks{font-family:var(--font-mono);font-size:.76rem;color:var(--text-muted);letter-spacing:.08em}.exam-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}.exam-grid .exam-card{min-height:140px}@media(max-width:900px){.exam-rules,.exam-grid{grid-template-columns:1fr}.exam-topline,.exam-footer{flex-direction:column;align-items:flex-start}.exam-badges{justify-content:flex-start}.exam-part{grid-template-columns:1fr}.exam-part-label{margin-bottom:.25rem}}
 
+
+
+/* ═══════════════════════════════════════════════
+   BOOK-PICKED PRACTICE SECTION
+═══════════════════════════════════════════════ */
+.book-practice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.book-exercise {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-card);
+}
+.book-exercise.hard {
+  border-left: 4px solid var(--accent);
+}
+.book-exercise.medium {
+  border-left: 4px solid var(--teal);
+}
+.book-source {
+  font-family: var(--font-mono);
+  font-size: .63rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .45rem;
+}
+.book-q-title {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: .45rem;
+  line-height: 1.35;
+}
+.book-q-text {
+  font-size: .84rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+}
+.book-choice-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .38rem .7rem;
+  margin-top: .65rem;
+  font-size: .8rem;
+  color: var(--text-secondary);
+}
+.book-choice-list.single {
+  grid-template-columns: 1fr;
+}
+.book-choice {
+  padding: .42rem .55rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.book-answer-btn {
+  margin-top: .75rem;
+}
+.book-answer {
+  display: none;
+  margin-top: .65rem;
+  padding: .75rem .85rem;
+  border: 1px solid rgba(0,196,180,.3);
+  background: var(--teal-dim);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: .8rem;
+  line-height: 1.55;
+}
+.book-answer.show { display: block; }
+.book-map {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .7rem;
+  margin-top: 1rem;
+}
+.book-map-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .75rem;
+  min-height: 85px;
+}
+.book-map-item strong {
+  display:block;
+  font-family: var(--font-mono);
+  font-size:.68rem;
+  color: var(--accent);
+  margin-bottom:.35rem;
+}
+.book-map-item span {
+  display:block;
+  font-size:.76rem;
+  color: var(--text-secondary);
+  line-height:1.45;
+}
+@media(max-width:900px){
+  .book-practice-grid{grid-template-columns:1fr;}
+  .book-map{grid-template-columns:1fr 1fr;}
+}
+
 </style>
 </head>
 <body>
@@ -1526,7 +1633,6 @@ kbd {
 <div class="cover-content">
 <div class="cover-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Expanded Lesson Deck</span></div>
 <h1 class="cover-title">Math<br/><em>Mastery</em><br/>Learning System</h1>
-<p class="cover-sub">The same visual design, now expanded into a 100+ slide lesson deck. Each math idea gets a clear concept explanation, a detailed worked example, and a quick practice check.</p>
 <div class="cover-pills"><span class="pill">34 Skills</span><span class="pill">102 Lesson Slides + Chapter Reviews</span><span class="pill">LaTeX-style Equations</span><span class="pill">Worked Examples</span><span class="pill">Practice Checks</span></div>
 </div>
 </div>
@@ -4481,7 +4587,329 @@ e0\).</li><li>The discriminant \(b^2-4ac\) tells the number and type of real sol
     </div>
   </div>
   <div class="exam-note">Hard-level expectation: reject impossible answers from context, such as negative side lengths.</div>
-  <div class="exam-footer"><button class="btn btn-outline" data-go="122">Question 4</button><span class="exam-marks">End of Final Test</span><button class="btn btn-primary" data-go="1">Back to Index</button></div>
+  <div class="exam-footer"><button class="btn btn-outline" data-go="122">Question 4</button><span class="exam-marks">End of Final Test</span><button class="btn btn-primary" data-go="124">Book Practice</button></div>
+</div>
+</section>
+
+
+
+<section class="slide" id="slide-124">
+<div class="slide-inner wide">
+  <div class="section-label">Textbook-picked practice section</div>
+  <h1 class="lesson-slide-title">Book-Based Medium Practice</h1>
+  <div class="accent-bar"></div>
+  <p class="body" style="max-width:880px;">These 10 exercises are picked from the <em>enVision Algebra 1</em> textbook. Each card shows the exact lesson, page, and exercise number.</p>
+  <div class="book-map">
+    <div class="book-map-item"><strong>1-3 · p.21 · #6</strong><span>solve a linear equation with variables on both sides</span></div>
+    <div class="book-map-item"><strong>1-5 · p.35 · #48</strong><span>match equivalent one-variable inequalities</span></div>
+    <div class="book-map-item"><strong>2-4 · p.82 · #33</strong><span>parallel lines and slope reasoning</span></div>
+    <div class="book-map-item"><strong>4-1 · p.148 · #20</strong><span>solve a system of linear equations</span></div>
+    <div class="book-map-item"><strong>4-3 · p.162 · #26</strong><span>model and solve a system from prices</span></div>
+    <div class="book-map-item"><strong>4-4 · p.168 · #18</strong><span>graph a linear inequality in two variables</span></div>
+    <div class="book-map-item"><strong>6-1 · p.222 · #34</strong><span>solve an exponential equation using common bases</span></div>
+    <div class="book-map-item"><strong>7-5 · p.293 · #39</strong><span>match trinomials with factored forms</span></div>
+    <div class="book-map-item"><strong>9-2 · p.369 · #37</strong><span>match quadratic equations with factors</span></div>
+    <div class="book-map-item"><strong>9-6 · p.394 · #23</strong><span>solve a quadratic equation using the quadratic formula</span></div>
+  </div>
+  <div class="q-actions" style="margin-top:1.2rem;"><button class="btn btn-primary" data-go="125">Start Medium Exercises</button><button class="btn btn-ghost" data-go="127">Skip to Hard Practice</button><button class="btn btn-outline" data-go="123">Back to Final Test</button></div>
+</div>
+</section>
+
+<section class="slide" id="slide-125">
+<div class="slide-inner wide">
+  <div class="section-label">Book-Based Medium Practice · Exercises 1-5</div>
+  <h2 class="lesson-slide-title">Selected Directly from the Textbook</h2>
+  <div class="book-practice-grid">
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 1-3 · p.21 · Exercise 6</div>
+      <div class="book-q-title">Solve the equation.</div>
+      <div class="book-q-text">\[-3(8+3h)=5h+4\]</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-1">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-1">\(h=-2\). Expanding gives \(-24-9h=5h+4\), then \(-14h=28\).</div>
+    </div>
+
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 1-5 · p.35 · Exercise 48</div>
+      <div class="book-q-title">Match each inequality with the equivalent inequality.</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(-\frac12x>-\frac32\)</div>
+        <div class="book-choice">I. \(x&lt;3\)</div>
+        <div class="book-choice">B. \(\frac12x&gt;\frac32\)</div>
+        <div class="book-choice">II. \(x&gt;3\)</div>
+        <div class="book-choice">C. \(\frac32x&gt;\frac12\)</div>
+        <div class="book-choice">III. \(x&gt;\frac13\)</div>
+        <div class="book-choice">D. \(-\frac32x&gt;-\frac12\)</div>
+        <div class="book-choice">IV. \(x&lt;\frac13\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-2">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-2">A-I, B-II, C-III, D-IV. Remember to reverse the inequality sign when multiplying or dividing by a negative number.</div>
+    </div>
+
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 2-4 · p.82 · Exercise 33</div>
+      <div class="book-q-title">A line passing through \((6,a)\) and \((9,-4)\) is parallel to \(2x-3y=6\). What is the value of \(a\)?</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(-6\)</div>
+        <div class="book-choice">B. \(-3\)</div>
+        <div class="book-choice">C. \(-2\)</div>
+        <div class="book-choice">D. \(3\)</div>
+        <div class="book-choice">E. \(6\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-3">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-3">A. The slope of \(2x-3y=6\) is \(\frac23\). So \(\frac{-4-a}{9-6}=\frac23\), giving \(a=-6\).</div>
+    </div>
+
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 4-1 · p.148 · Exercise 20</div>
+      <div class="book-q-title">Solve the system. Round to the thousandths if necessary.</div>
+      <div class="book-q-text">\[y=5x+1\qquad y=2x+6\]</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-4">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-4">\(\left(\frac53,\frac{28}{3}\right)\), or approximately \((1.667,9.333)\).</div>
+    </div>
+
+    <div class="book-exercise medium" style="grid-column:1/-1;">
+      <div class="book-source">Lesson 4-3 · p.162 · Exercise 26</div>
+      <div class="book-q-title">Two pizzas and four sandwiches cost \(\$62\). Four pizzas and ten sandwiches cost \(\$140\). How much does each pizza and sandwich cost?</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-5">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-5">Pizza: \(\$15\). Sandwich: \(\$8\). One system is \(2p+4s=62\), \(4p+10s=140\).</div>
+    </div>
+  </div>
+  <div class="q-actions" style="margin-top:1rem;"><button class="btn btn-outline" data-go="124">Medium Overview</button><button class="btn btn-primary" data-go="126">Exercises 6-10</button></div>
+</div>
+</section>
+
+<section class="slide" id="slide-126">
+<div class="slide-inner wide">
+  <div class="section-label">Book-Based Medium Practice · Exercises 6-10</div>
+  <h2 class="lesson-slide-title">Selected Directly from the Textbook</h2>
+  <div class="book-practice-grid">
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 4-4 · p.168 · Exercise 18</div>
+      <div class="book-q-title">Graph the inequality in the coordinate plane.</div>
+      <div class="book-q-text">\[y\le \frac23x-1\]</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-6">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-6">Use a solid boundary line \(y=\frac23x-1\), because the inequality includes equality, then shade below the line.</div>
+    </div>
+
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 6-1 · p.222 · Exercise 34</div>
+      <div class="book-q-title">Solve the equation.</div>
+      <div class="book-q-text">\[625^{2x-3}=25^{3x-2}\]</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-7">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-7">\(x=4\). Since \(625=25^2\), the equation becomes \(25^{4x-6}=25^{3x-2}\), so \(4x-6=3x-2\).</div>
+    </div>
+
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 7-5 · p.293 · Exercise 39</div>
+      <div class="book-q-title">Match each trinomial with its factored form.</div>
+      <div class="book-choice-list">
+        <div class="book-choice">I. \(x^2+13x+30\)</div>
+        <div class="book-choice">A. \((x-10)(x+3)\)</div>
+        <div class="book-choice">II. \(x^2+x-30\)</div>
+        <div class="book-choice">B. \((x-6)(x+5)\)</div>
+        <div class="book-choice">III. \(x^2-7x-30\)</div>
+        <div class="book-choice">C. \((x-5)(x+6)\)</div>
+        <div class="book-choice">IV. \(x^2-x-30\)</div>
+        <div class="book-choice">D. \((x+10)(x+3)\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-8">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-8">I-D, II-C, III-A, IV-B.</div>
+    </div>
+
+    <div class="book-exercise medium">
+      <div class="book-source">Lesson 9-2 · p.369 · Exercise 37</div>
+      <div class="book-q-title">Match each equation with one or more factors of its standard form.</div>
+      <div class="book-choice-list">
+        <div class="book-choice">I. \(x^2+6x=-8\)</div>
+        <div class="book-choice">A. \(x-3\)</div>
+        <div class="book-choice">II. \(2x^2+x=6\)</div>
+        <div class="book-choice">B. \(x+4\)</div>
+        <div class="book-choice">III. \(x^2+2x=8\)</div>
+        <div class="book-choice">C. \(x-4\)</div>
+        <div class="book-choice">IV. \(2x^2+5x=12\)</div>
+        <div class="book-choice">D. \(x+2\)</div>
+        <div class="book-choice">V. \(2x^2-11x=-12\)</div>
+        <div class="book-choice">E. \(x-2\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-9">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-9">I-B,D; II-D; III-B,E; IV-B; V-C.</div>
+    </div>
+
+    <div class="book-exercise medium" style="grid-column:1/-1;">
+      <div class="book-source">Lesson 9-6 · p.394 · Exercise 23</div>
+      <div class="book-q-title">Solve the equation using the quadratic formula. Round to the nearest hundredth.</div>
+      <div class="book-q-text">\[2x^2-9x+7=0\]</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-medium-answer-10">Reveal Answer</button>
+      <div class="book-answer" id="book-medium-answer-10">\(x=1\) or \(x=3.5\). Using the formula gives \(x=\frac{9\pm5}{4}\).</div>
+    </div>
+  </div>
+  <div class="q-actions" style="margin-top:1rem;"><button class="btn btn-outline" data-go="125">Exercises 1-5</button><button class="btn btn-ghost" data-go="124">Medium Overview</button><button class="btn btn-primary" data-go="127">Go to Hard Practice</button></div>
+</div>
+</section>
+
+<section class="slide" id="slide-127">
+<div class="slide-inner wide">
+  <div class="section-label">Textbook-picked practice section</div>
+  <h1 class="lesson-slide-title">Book-Based Hard Practice</h1>
+  <div class="accent-bar"></div>
+  <p class="body" style="max-width:880px;">These 10 exercises were selected from the relevant <em>enVision Algebra 1</em> . Each card gives the exact textbook lesson, page, and exercise number.</p>
+  <div class="book-map">
+    <div class="book-map-item"><strong>1-3 · p.23 · #48</strong><span>linear equations with variables on both sides; no-solution cases</span></div>
+    <div class="book-map-item"><strong>1-5 · p.35 · #49</strong><span>one-variable inequality with decimal coefficients</span></div>
+    <div class="book-map-item"><strong>2-4 · p.82 · #32</strong><span>parallel and perpendicular lines using slopes</span></div>
+    <div class="book-map-item"><strong>4-1 · p.149 · #28</strong><span>solving a system of linear equations</span></div>
+    <div class="book-map-item"><strong>4-3 · p.163 · #37</strong><span>systems by elimination</span></div>
+    <div class="book-map-item"><strong>6-1 · p.223 · #49</strong><span>rational exponents and exponent laws</span></div>
+    <div class="book-map-item"><strong>7 · p.306 · #53</strong><span>factoring special polynomial forms</span></div>
+    <div class="book-map-item"><strong>9-2 · p.369 · #38</strong><span>quadratic equations, roots, and vertex reasoning</span></div>
+    <div class="book-map-item"><strong>9-3 · p.375 · #52</strong><span>rewriting radical expressions</span></div>
+    <div class="book-map-item"><strong>9-6 · p.394 · #18</strong><span>quadratic formula, axis of symmetry, discriminant</span></div>
+  </div>
+  <div class="q-actions" style="margin-top:1.2rem;"><button class="btn btn-primary" data-go="128">Start Exercises</button><button class="btn btn-outline" data-go="123">Back to Final Test</button></div>
+</div>
+</section>
+
+<section class="slide" id="slide-128">
+<div class="slide-inner wide">
+  <div class="section-label">Book-Based Hard Practice · Exercises 1-5</div>
+  <h2 class="lesson-slide-title">Selected Directly from the Textbook</h2>
+  <div class="book-practice-grid">
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 1-3 · p.23 · Exercise 48</div>
+      <div class="book-q-title">Which equations have no solution? Select all that apply.</div>
+      <div class="book-choice-list single">
+        <div class="book-choice">A. \(x-9=2(x-3)+12\)</div>
+        <div class="book-choice">B. \(5(-2x+7)+3=-10x+38\)</div>
+        <div class="book-choice">C. \(\frac12(6x-4)=3(x-2)\)</div>
+        <div class="book-choice">D. \(0.01x+0.001=\frac{1}{100}(x+10)\)</div>
+        <div class="book-choice">E. \(3(x+2)+1=x+2(4+x)\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-1">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-1">C, D, and E. In each one, simplifying both sides gives a false statement with no possible value of \(x\).</div>
+    </div>
+
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 1-5 · p.35 · Exercise 49</div>
+      <div class="book-q-title">Which of the following is the solution of \(0.125x+1-0.25x<-3\)?</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(x<-0.5\)</div>
+        <div class="book-choice">B. \(x<0.5\)</div>
+        <div class="book-choice">C. \(x>0.5\)</div>
+        <div class="book-choice">D. \(x<32\)</div>
+        <div class="book-choice">E. \(x>32\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-2">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-2">E. \(-0.125x+1<-3\Rightarrow -0.125x<-4\Rightarrow x>32\).</div>
+    </div>
+
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 2-4 · p.82 · Exercise 32</div>
+      <div class="book-q-title">Which of the following lines is perpendicular to \(y=\frac14x-3\)? Select all that apply.</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(y=4x\)</div>
+        <div class="book-choice">B. \(4x-y=-2\)</div>
+        <div class="book-choice">C. \(y=-4x+6\)</div>
+        <div class="book-choice">D. \(8x-2y=3\)</div>
+        <div class="book-choice">E. \(y=4x+9\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-3">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-3">C only. A perpendicular line must have slope \(-4\), the opposite reciprocal of \(\frac14\).</div>
+    </div>
+
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 4-1 · p.149 · Exercise 28</div>
+      <div class="book-q-title">Select the solution of the system of equations.</div>
+      <div class="book-q-text">\[y=-3x-3\qquad y=-0.5x+2\]</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \((0,2)\)</div>
+        <div class="book-choice">B. \((-1,0)\)</div>
+        <div class="book-choice">C. \((-1,2)\)</div>
+        <div class="book-choice">D. \((-2,3)\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-4">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-4">D. Setting the equations equal gives \(-3x-3=-0.5x+2\), so \(x=-2\) and \(y=3\).</div>
+    </div>
+
+    <div class="book-exercise hard" style="grid-column:1/-1;">
+      <div class="book-source">Lesson 4-3 · p.163 · Exercise 37</div>
+      <div class="book-q-title">Solve the system of equations using elimination. Complete the solution.</div>
+      <div class="book-q-text">\[4x+3y=6\qquad 2x-5y=16\]</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-5">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-5">\(x=3\), \(y=-2\). Doubling the second equation gives \(4x-10y=32\). Subtracting from \(4x+3y=6\) gives \(13y=-26\).</div>
+    </div>
+  </div>
+  <div class="q-actions" style="margin-top:1rem;"><button class="btn btn-outline" data-go="127">Overview</button><button class="btn btn-primary" data-go="129">Exercises 6-10</button></div>
+</div>
+</section>
+
+<section class="slide" id="slide-129">
+<div class="slide-inner wide">
+  <div class="section-label">Book-Based Hard Practice · Exercises 6-10</div>
+  <h2 class="lesson-slide-title">Selected Directly from the Textbook</h2>
+  <div class="book-practice-grid">
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 6-1 · p.223 · Exercise 49</div>
+      <div class="book-q-title">What is the value of \(x\) in \(27^{x/2}=3^{x-1}\)?</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(-3\)</div>
+        <div class="book-choice">B. \(-2\)</div>
+        <div class="book-choice">C. \(\frac13\)</div>
+        <div class="book-choice">D. \(2\)</div>
+        <div class="book-choice">E. \(3\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-6">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-6">B. Since \(27=3^3\), \(27^{x/2}=3^{3x/2}\). Then \(\frac{3x}{2}=x-1\), so \(x=-2\).</div>
+    </div>
+
+    <div class="book-exercise hard">
+      <div class="book-source">Topic 7 · p.306 · Exercise 53</div>
+      <div class="book-q-title">What is the factored form of \(6x^2-60x+150\)?</div>
+      <div class="book-choice-list single">
+        <div class="book-choice">A. \(6(x-25)^2\)</div>
+        <div class="book-choice">B. \(6(x-5)(x-10)\)</div>
+        <div class="book-choice">C. \(6(x-5)^2\)</div>
+        <div class="book-choice">D. \(6(x-5)(x+5)\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-7">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-7">C. Factor the GCF first: \(6x^2-60x+150=6(x^2-10x+25)=6(x-5)^2\).</div>
+    </div>
+
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 9-2 · p.369 · Exercise 38</div>
+      <div class="book-q-title">A quadratic equation of the form \(x^2+bx+c=0\) has a solution of \(-2\). Its related function has a vertex at \((2.5,-20.25)\). What is the other solution?</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(-11\)</div>
+        <div class="book-choice">B. \(-4.5\)</div>
+        <div class="book-choice">C. \(0.5\)</div>
+        <div class="book-choice">D. \(7\)</div>
+        <div class="book-choice">E. \(9\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-8">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-8">D. The vertex x-coordinate is the average of the roots. \(\frac{-2+r}{2}=2.5\Rightarrow r=7\).</div>
+    </div>
+
+    <div class="book-exercise hard">
+      <div class="book-source">Lesson 9-3 · p.375 · Exercise 52</div>
+      <div class="book-q-title">A car skidded \(144\) ft. On a damp paved road, \(r=\sqrt{18s}\) estimates the car's speed in ft/s. Which expression represents the speed?</div>
+      <div class="book-choice-list">
+        <div class="book-choice">A. \(24\sqrt6\)</div>
+        <div class="book-choice">B. \(12\sqrt6\)</div>
+        <div class="book-choice">C. \(36\sqrt2\)</div>
+        <div class="book-choice">D. \(24\sqrt3\)</div>
+        <div class="book-choice">E. \(48\sqrt2\)</div>
+      </div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-9">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-9">C. \(r=\sqrt{18\cdot144}=\sqrt{2592}=\sqrt{1296\cdot2}=36\sqrt2\).</div>
+    </div>
+
+    <div class="book-exercise hard" style="grid-column:1/-1;">
+      <div class="book-source">Lesson 9-6 · p.394 · Exercise 18</div>
+      <div class="book-q-title">Use the quadratic formula to prove the axis of symmetry can be found using \(-\frac{b}{2a}\). What does the discriminant of a quadratic equation tell you about the vertex of the graph of the related function?</div>
+      <button class="btn btn-primary book-answer-btn" data-reveal="book-answer-10">Reveal Answer</button>
+      <div class="book-answer" id="book-answer-10">The roots from the quadratic formula are \(\frac{-b+\sqrt{D}}{2a}\) and \(\frac{-b-\sqrt{D}}{2a}\). Their average is \(-\frac{b}{2a}\), so the axis of symmetry is \(x=-\frac{b}{2a}\). If \(D>0\), the graph crosses the x-axis twice; if \(D=0\), the vertex is on the x-axis; if \(D<0\), the graph has no real x-intercepts.</div>
+    </div>
+  </div>
+  <div class="q-actions" style="margin-top:1rem;"><button class="btn btn-outline" data-go="128">Exercises 1-5</button><button class="btn btn-primary" data-go="127">Practice Overview</button></div>
 </div>
 </section>
 
